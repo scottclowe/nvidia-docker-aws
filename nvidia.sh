@@ -44,7 +44,7 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 
 # Move the docker images to /mnt where there's a *lot* more space
 service docker stop
-mv /var/log/docker /mnt
-ln -s /mnt/docker /var/log/docker
+mv /var/lib/docker /mnt
+ln -s /mnt/docker /var/lib/docker
 service docker start
 nvidia-docker run --rm nvidia/cuda nvidia-smi
