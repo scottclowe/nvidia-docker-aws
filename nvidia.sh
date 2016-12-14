@@ -30,10 +30,10 @@ docker run hello-world
 # Install nvidia drivers
 add-apt-repository -y ppa:graphics-drivers/ppa
 apt-get update
-apt-get install nvidia-367 # This version can change. Check PPA for latest version
+apt-get install -y nvidia-367 # This version can change. Check PPA for latest version
 
 # Install the kernel module
-apt-get install nvidia-modprobe
+apt-get install -y nvidia-modprobe
 
 # Add nvidia-docker extension
 wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
