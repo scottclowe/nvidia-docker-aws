@@ -40,7 +40,7 @@ apt-get install -y nvidia-367 # This version can change. Check PPA for latest ve
 apt-get install -y nvidia-modprobe
 
 # Add nvidia-docker extension
-wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
+wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
 dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 
 # Test if nvidia-docker works
