@@ -19,7 +19,11 @@ apt-get update
 apt-cache policy docker-engine
 
 # Install requirements first
-apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual
+apt-get install -y linux-image-extra-virtual
+# This install is not working on the Deep Learning AMI Ubuntu, Version 2.2_Aug2017 - ami-f211e38b
+# It is looking for 4.4.0-1031-aws, which is not available
+sudo apt-get install -y linux-image-extra-$(uname -r) || \
+    echo "Couldn't find pacakge specifically for $(uname -r)"
 
 # Install docker
 apt-get install -y docker-engine
